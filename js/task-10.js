@@ -29,7 +29,6 @@ function createBoxes(amount) {
 }
 
 function addBoxes() {
-  console.log(inputValueEl.value);
   inputValueEl.value = '';
   return divBoxEl.append(...createBoxes(numberOfBoxes));
 }
