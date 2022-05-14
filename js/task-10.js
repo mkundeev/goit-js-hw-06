@@ -24,10 +24,13 @@ function createBoxes(amount) {
     boxSize += 10;
     boxes.push(box);
   }
+  numberOfBoxes = 0;
   return boxes;
 }
 
-function addBoxes (){
+function addBoxes() {
+  console.log(inputValueEl.value);
+  inputValueEl.value = '';
   return divBoxEl.append(...createBoxes(numberOfBoxes));
 }
 
@@ -35,5 +38,7 @@ creatButtonEl.addEventListener('click', addBoxes);
 
 destroyButtonEl.addEventListener('click', () => {
   divBoxEl.innerHTML = '';
+  inputValueEl.value = '';
+  numberOfBoxes = 0;
 });
 
