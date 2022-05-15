@@ -9,8 +9,15 @@ const inputValueEl = document.querySelector('input');
 
 let numberOfBoxes = 0;
 
-inputValueEl.addEventListener('input', (event) => {
-  numberOfBoxes = event.currentTarget.value;
+inputValueEl.addEventListener('input', () => {
+  numberOfBoxes = inputValueEl.value;
+});
+
+creatButtonEl.addEventListener('click', addBoxes);
+
+destroyButtonEl.addEventListener('click', () => {
+  divBoxEl.innerHTML = '';
+  resetNumberOfBoxes();
 });
 
 function createBoxes(amount) {
@@ -24,20 +31,19 @@ function createBoxes(amount) {
     boxSize += 10;
     boxes.push(box);
   }
-  numberOfBoxes = 0;
+  resetNumberOfBoxes();
   return boxes;
 }
 
 function addBoxes() {
-  inputValueEl.value = '';
   return divBoxEl.append(...createBoxes(numberOfBoxes));
 }
 
-creatButtonEl.addEventListener('click', addBoxes);
 
-destroyButtonEl.addEventListener('click', () => {
-  divBoxEl.innerHTML = '';
+function resetNumberOfBoxes() {
   inputValueEl.value = '';
   numberOfBoxes = 0;
-});
+}
+
+
 
