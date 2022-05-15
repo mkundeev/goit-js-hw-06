@@ -13,8 +13,8 @@ const handleSubmit = (event) => {
   }
 
     const results = {
-        email: email.value,
-        password: password.value,
+        [email.name]: email.value,
+        [password.name]: password.value,
 
   }
     console.log(results);
