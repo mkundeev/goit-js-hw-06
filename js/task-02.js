@@ -32,7 +32,7 @@ ingredientsEl.append(...items);
 
 
 // function markupItem(name) {
-//   return `<li class="item">${name}<li>`
+//   return `<li class="item">${name}</li>`
 // }
 // function markupList (names) {
 //   return names.map(markupItem);
