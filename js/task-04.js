@@ -3,7 +3,7 @@ const counterEl = document.querySelector('#value');
 const decrementEl = document.querySelector('[data-action="decrement"]');
 const incrementEl = document.querySelector('[data-action="increment"]');
 
-let counterValue = Number(counterEl.textContent);
+let counterValue = 0;
 
 const toDecreaseValue = () => {
     counterValue -= 1;
